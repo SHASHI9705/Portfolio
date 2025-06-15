@@ -1,4 +1,5 @@
 import React from "react";
+import SectionConnector from "./SectionConnector";
 
 const About: React.FC = () => {
   return (
@@ -17,7 +18,7 @@ const About: React.FC = () => {
         </div>
       </div>
       <div className="flex flex-col md:flex-row w-full max-w-[90vw] xl:max-w-[1400px] mx-auto gap-8 mt-8 px-2 md:px-6">
-        <div className="w-full md:w-[55%] bg-white/5 rounded-xl p-8 shadow-lg flex flex-col items-start">
+        <div className="w-full md:w-[55%]  rounded-xl p-8 shadow-lg flex flex-col items-start">
           <h3 className="text-2xl font-semibold mb-2 text-left w-full bg-gradient-to-r from-blue-400 via-green-400 to-blue-400 bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient-x">Who I Am</h3>
           <div className="relative flex justify-start w-full">
             <div className="h-1 w-[120px] bg-white rounded-full mb-6"
@@ -87,6 +88,10 @@ const About: React.FC = () => {
           </div>
         </div>
       </div>
+      <br />
+      <br />
+      <br />
+      <SectionConnector />
     </section>
   );
 };

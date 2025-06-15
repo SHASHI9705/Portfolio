@@ -4,6 +4,8 @@ import GridBackground from './components/GridBackground';
 import Body from './components/Body';
 import About from './components/About';
 import Skills from './components/Skills';
+import ReachMe from './components/ReachMe';
+import SectionConnector from './components/SectionConnector';
 
 function App() {
   return (
@@ -12,8 +14,11 @@ function App() {
       <GridBackground />
       <Navbar />
       <Body />
+      <SectionConnector />
       <About />
       <Skills />
+      <SectionConnector />
+      <ReachMe />
     </>
   );
 }

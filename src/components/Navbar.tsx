@@ -31,6 +31,10 @@ const Navbar: React.FC = () => (
     <a
       href="#reachme"
       className="hover:bg-white/20 hover:text-blue-300 transition-all duration-300 px-3 py-1 rounded-full"
+      onClick={e => {
+        e.preventDefault();
+        document.querySelector('#reachme')?.scrollIntoView({ behavior: 'smooth' });
+      }}
     >
       Reach Me
     </a>

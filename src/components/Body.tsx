@@ -1,5 +1,5 @@
 import React from "react";
-import { GithubIcon } from "../../Icons/githubicon";
+
 import { LinkedinIcon } from "../../Icons/linkedinicon";
 import { EmailIcon } from "../../Icons/emailicon";
 import { CallIcon } from "../../Icons/callicon";
@@ -17,9 +17,10 @@ const Body: React.FC = () => {
         </span>{" "}
         ARCHITECT
       </h2>
-      <p className="mt-6 max-w-2xl text-lg md:text-xl text-gray-300 text-center font-light">
+      <p className="mt-6 max-w-4xl text-lg md:text-xl text-gray-300 text-center font-bold">
         From frontend finesse to backend brains, I craft full-stack solutions that
-        scale. Architecting cloud-first systems that don’t just work — they win.
+        scale.
+        <br /> Architecting cloud-first systems that don’t just work — they win.
       </p>
       <a
         href="/src/assets/Shashiranjan%20singh%20-Resume.pdf.pdf"
@@ -33,7 +34,7 @@ const Body: React.FC = () => {
         />
         Download Resume
       </a>
-      <div className="mt-14 flex gap-4">
+      <div className="mt-14 flex gap-6">
         <a
           href="https://github.com/SHASHI9705"
           target="_blank"
