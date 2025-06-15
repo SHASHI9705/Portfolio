@@ -1,5 +1,5 @@
 // ShellIcon.tsx
-import React from "react";
+
 
 export function ShellIcon() {
   return (
