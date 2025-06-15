@@ -5,12 +5,20 @@ const Navbar: React.FC = () => (
     <a
       href="#about"
       className="hover:bg-white/20 hover:text-blue-300 transition-all duration-300 px-3 py-1 rounded-full"
+      onClick={e => {
+        e.preventDefault();
+        document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' });
+      }}
     >
       About
     </a>
     <a
       href="#skills"
       className="hover:bg-white/20 hover:text-blue-300 transition-all duration-300 px-3 py-1 rounded-full"
+      onClick={e => {
+        e.preventDefault();
+        document.querySelector('#skills')?.scrollIntoView({ behavior: 'smooth' });
+      }}
     >
       Skills
     </a>

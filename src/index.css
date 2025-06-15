@@ -8,3 +8,16 @@ body {
   margin: 0;
   padding: 0;
 }
+
+@keyframes gradient-x {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+.animate-gradient-x {
+  animation: gradient-x 3s ease-in-out infinite;
+  background-size: 200% 200%;
+}

@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import GridBackground from './components/GridBackground';
 import Body from './components/Body';
 import About from './components/About';
+import Skills from './components/Skills';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Navbar />
       <Body />
       <About />
+      <Skills />
     </>
   );
 }

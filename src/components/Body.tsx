@@ -34,15 +34,29 @@ const Body: React.FC = () => {
         Download Resume
       </a>
       <div className="mt-14 flex gap-4">
-        <span className="p-2 rounded-lg bg-white/10 backdrop-blur-md shadow-md flex items-center justify-center transition-transform duration-200 hover:scale-110 hover:bg-white/20 cursor-pointer">
+        <a
+          href="https://github.com/SHASHI9705"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="p-2 rounded-lg bg-white/10 backdrop-blur-md shadow-md flex items-center justify-center transition-transform duration-200 hover:scale-110 hover:bg-white/20 cursor-pointer"
+        >
           <GithubIcon />
-        </span>
-        <span className="p-2 rounded-lg bg-white/10 backdrop-blur-md shadow-md flex items-center justify-center transition-transform duration-200 hover:scale-110 hover:bg-white/20 cursor-pointer">
+        </a>
+        <a
+          href="https://www.linkedin.com/in/shashiranjan-singh9/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="p-2 rounded-lg bg-white/10 backdrop-blur-md shadow-md flex items-center justify-center transition-transform duration-200 hover:scale-110 hover:bg-white/20 cursor-pointer"
+        >
           <LinkedinIcon />
-        </span>
-        <span className="p-2 rounded-lg bg-white/10 backdrop-blur-md shadow-md flex items-center justify-center transition-transform duration-200 hover:scale-110 hover:bg-white/20 cursor-pointer">
+        </a>
+        <a
+          href="mailto:singhshashiranjan34@gmail.com"
+          className="p-2 rounded-lg bg-white/10 backdrop-blur-md shadow-md flex items-center justify-center transition-transform duration-200 hover:scale-110 hover:bg-white/20 cursor-pointer"
+        >
+            
           <EmailIcon />
-        </span>
+        </a>
         <span className="p-2 rounded-lg bg-white/10 backdrop-blur-md shadow-md flex items-center justify-center transition-transform duration-200 hover:scale-110 hover:bg-white/20 cursor-pointer">
           <CallIcon />
         </span>
