@@ -29,7 +29,7 @@ const Loader: React.FC = () => {
         className="text-4xl font-extrabold mb-6 tracking-widest loader-robotic-font"
         style={{ fontFamily: "Roboto Mono, monospace" }}
       >
-        Loading for you...
+        LOADING FOR YOU...
       </div>
       <div className="w-72 h-0.5 bg-white/10 rounded-full overflow-hidden mb-4">
         <div

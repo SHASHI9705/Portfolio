@@ -20,7 +20,7 @@ const projectCards = [
 ];
 
 const Projects: React.FC = () => {
-  const [centerIdx, setCenterIdx] = useState(1); // Start with Project 2 in center
+  const [centerIdx, setCenterIdx] = useState(0); 
   const [fadeState, setFadeState] = useState<'idle' | 'fading-out' | 'fading-in'>('idle');
 
   const handleLeft = () => {
