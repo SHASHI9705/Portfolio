@@ -6,7 +6,7 @@ import { CallIcon } from "../../Icons/callicon";
 const Body: React.FC = () => {
   return (
     <div className="flex flex-col items-center justify-center min-h-[85vh] mt-6 px-2 sm:px-4 md:px-8">
-      <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-[5rem] lg:text-[7rem] font-extrabold bg-gradient-to-t from-gray-900 via-gray-100 to-white bg-clip-text text-transparent drop-shadow-lg text-center break-words leading-tight">
+      <h1 className="text-2xl xs:text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold bg-gradient-to-t from-gray-900 via-gray-100 to-white bg-clip-text text-transparent drop-shadow-lg text-center break-words leading-tight">
         SHASHIRANJAN SINGH
       </h1>
       <h2 className="mt-2 sm:mt-4 text-lg xs:text-xl sm:text-2xl md:text-3xl font-thin text-gray-200 tracking-wide text-center drop-shadow">
@@ -16,7 +16,7 @@ const Body: React.FC = () => {
         </span>{" "}
         ARCHITECT
       </h2>
-      <p className="mt-4 sm:mt-6 max-w-xs sm:max-w-2xl md:max-w-4xl text-base xs:text-lg md:text-xl text-gray-300 text-center font-bold">
+      <p className="mt-4 sm:mt-6 max-w-xs sm:max-w-2xl md:max-w-4xl text-sm xs:text-base md:text-lg text-gray-300 text-center font-bold">
         From frontend finesse to backend brains, I craft full-stack solutions that
         scale.
         <br /> Architecting cloud-first systems that don’t just work — they win.

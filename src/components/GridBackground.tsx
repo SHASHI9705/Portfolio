@@ -9,11 +9,11 @@ const GridBackground: React.FC = () => (
       xmlns="http://www.w3.org/2000/svg"
     >
       <defs>
-        <pattern id="grid" width="5" height="5" patternUnits="userSpaceOnUse">
+        <pattern id="grid" width="4" height="5" patternUnits="userSpaceOnUse">
           <path d="M 5 0 L 0 0 0 5" fill="none" stroke="#ffffff11" strokeWidth="0.4" />
         </pattern>
         <radialGradient id="mask" cx="50%" cy="50%" r="50%">
-          <stop offset="90%" stopColor="#000" stopOpacity="0" />
+          <stop offset="70%" stopColor="#000" stopOpacity="0" />
           <stop offset="100%" stopColor="#000" stopOpacity="1" />
         </radialGradient>
       </defs>
