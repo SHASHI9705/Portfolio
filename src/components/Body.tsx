@@ -1,23 +1,22 @@
 import React from "react";
-
 import { LinkedinIcon } from "../../Icons/linkedinicon";
 import { EmailIcon } from "../../Icons/emailicon";
 import { CallIcon } from "../../Icons/callicon";
 
 const Body: React.FC = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-[85vh] mt-10">
-      <h1 className="text-[7rem] md:text-[7rem] font-extrabold bg-gradient-to-t from-gray-900 via-gray-200 to-white bg-clip-text text-transparent drop-shadow-lg text-center">
+    <div className="flex flex-col items-center justify-center min-h-[85vh] mt-6 px-2 sm:px-4 md:px-8">
+      <h1 className="text-4xl xs:text-5xl sm:text-6xl md:text-[5rem] lg:text-[7rem] font-extrabold bg-gradient-to-t from-gray-900 via-gray-100 to-white bg-clip-text text-transparent drop-shadow-lg text-center break-words leading-tight">
         SHASHIRANJAN SINGH
       </h1>
-      <h2 className="mt-4 text-2xl md:text-3xl font-thin text-gray-200 tracking-wide text-center drop-shadow">
+      <h2 className="mt-2 sm:mt-4 text-lg xs:text-xl sm:text-2xl md:text-3xl font-thin text-gray-200 tracking-wide text-center drop-shadow">
         FULL STACK{" "}
         <span className="font-semibold bg-gradient-to-r from-blue-400 via-green-400 to-blue-400 bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient-x">
           DEVELOPER & SOLUTION
         </span>{" "}
         ARCHITECT
       </h2>
-      <p className="mt-6 max-w-4xl text-lg md:text-xl text-gray-300 text-center font-bold">
+      <p className="mt-4 sm:mt-6 max-w-xs sm:max-w-2xl md:max-w-4xl text-base xs:text-lg md:text-xl text-gray-300 text-center font-bold">
         From frontend finesse to backend brains, I craft full-stack solutions that
         scale.
         <br /> Architecting cloud-first systems that don’t just work — they win.
@@ -25,23 +24,23 @@ const Body: React.FC = () => {
       <a
         href="/src/assets/Shashiranjan%20singh%20-Resume.pdf.pdf"
         download
-        className="mt-6 flex items-center gap-2 px-8 py-3 bg-white text-gray-900 rounded-lg shadow-lg font-semibold text-lg transition-all duration-200 hover:bg-gray-100 hover:scale-105 active:scale-100 focus:outline-none focus:ring-2 focus:ring-blue-300"
+        className="mt-6 flex items-center gap-2 px-4 xs:px-6 sm:px-8 py-2 xs:py-2.5 sm:py-3 bg-white text-gray-900 rounded-lg shadow-lg font-semibold text-base xs:text-lg transition-all duration-200 hover:bg-gray-100 hover:scale-105 active:scale-100 focus:outline-none focus:ring-2 focus:ring-blue-300"
       >
         <img
           src="/src/assets/document-black.svg"
           alt="document"
-          className="w-7 h-7"
+          className="w-6 h-6 xs:w-7 xs:h-7"
         />
         Download Resume
       </a>
-      <div className="mt-14 flex gap-6">
+      <div className="mt-10 sm:mt-14 flex flex-wrap gap-4 sm:gap-6 justify-center">
         <a
           href="https://github.com/SHASHI9705"
           target="_blank"
           rel="noopener noreferrer"
           className="p-2 border border-white rounded-full bg-white/10 backdrop-blur-md shadow-md flex items-center justify-center transition-transform duration-200 hover:scale-110 hover:bg-blue-500/20 cursor-pointer"
         >
-          <svg
+        <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
       fill="white"
@@ -58,16 +57,26 @@ const Body: React.FC = () => {
         >
           <LinkedinIcon />
         </a>
-        <a
-          href="mailto:singhshashiranjan34@gmail.com"
+        <button
+          type="button"
+          onClick={() => {
+            document.querySelector('#reachme')?.scrollIntoView({ behavior: 'smooth' });
+          }}
           className="p-2 border border-white rounded-full bg-white/10 backdrop-blur-md shadow-md flex items-center justify-center transition-transform duration-200 hover:scale-110 hover:bg-red-500/20 cursor-pointer"
+          aria-label="Email"
         >
-            
           <EmailIcon />
-        </a>
-        <span className="p-2 border border-white rounded-full bg-white/10 backdrop-blur-md shadow-md flex items-center justify-center transition-transform duration-200 hover:scale-110 hover:bg-blue-500/20 cursor-pointer">
+        </button>
+        <button
+          type="button"
+          onClick={() => {
+            document.querySelector('#reachme')?.scrollIntoView({ behavior: 'smooth' });
+          }}
+          className="p-2 border border-white rounded-full bg-white/10 backdrop-blur-md shadow-md flex items-center justify-center transition-transform duration-200 hover:scale-110 hover:bg-blue-500/20 cursor-pointer"
+          aria-label="Call"
+        >
           <CallIcon />
-        </span>
+        </button>
       </div>
     </div>
   );
