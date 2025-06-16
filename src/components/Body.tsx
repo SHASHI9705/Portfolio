@@ -39,7 +39,7 @@ const Body: React.FC = () => {
           href="https://github.com/SHASHI9705"
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2 rounded-full bg-white/10 backdrop-blur-md shadow-md flex items-center justify-center transition-transform duration-200 hover:scale-110 hover:bg-blue-500/20 cursor-pointer"
+          className="p-2 border border-white rounded-full bg-white/10 backdrop-blur-md shadow-md flex items-center justify-center transition-transform duration-200 hover:scale-110 hover:bg-blue-500/20 cursor-pointer"
         >
           <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -54,18 +54,18 @@ const Body: React.FC = () => {
           href="https://www.linkedin.com/in/shashiranjan-singh9/"
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2 rounded-full bg-white/10 backdrop-blur-md shadow-md flex items-center justify-center transition-transform duration-200 hover:scale-110 hover:bg-blue-200/20 cursor-pointer"
+          className="p-2 border border-white rounded-full bg-white/10 backdrop-blur-md shadow-md flex items-center justify-center transition-transform duration-200 hover:scale-110 hover:bg-blue-200/20 cursor-pointer"
         >
           <LinkedinIcon />
         </a>
         <a
           href="mailto:singhshashiranjan34@gmail.com"
-          className="p-2 rounded-full bg-white/10 backdrop-blur-md shadow-md flex items-center justify-center transition-transform duration-200 hover:scale-110 hover:bg-red-500/20 cursor-pointer"
+          className="p-2 border border-white rounded-full bg-white/10 backdrop-blur-md shadow-md flex items-center justify-center transition-transform duration-200 hover:scale-110 hover:bg-red-500/20 cursor-pointer"
         >
             
           <EmailIcon />
         </a>
-        <span className="p-2 rounded-full bg-white/10 backdrop-blur-md shadow-md flex items-center justify-center transition-transform duration-200 hover:scale-110 hover:bg-white/20 cursor-pointer">
+        <span className="p-2 border border-white rounded-full bg-white/10 backdrop-blur-md shadow-md flex items-center justify-center transition-transform duration-200 hover:scale-110 hover:bg-blue-500/20 cursor-pointer">
           <CallIcon />
         </span>
       </div>

@@ -69,7 +69,7 @@ const ReachMe: React.FC = () => {
           </div>
           
         </div>
-        <div className="w-full md:w-1/2 bg-white/5 rounded-xl p-8 shadow-lg flex flex-col items-center justify-center min-h-[300px]">
+        <div className="w-full border border-white md:w-1/2 bg-white/5 rounded-xl p-8 shadow-lg flex flex-col items-center justify-center min-h-[300px]">
           <form className="w-full max-w-md flex flex-col gap-6" action="https://formsubmit.co/singhshashiranjan34@gmail.com" method="POST">
             <div className="flex flex-col gap-2">
               <label htmlFor="name" className="text-white font-semibold">Name</label>

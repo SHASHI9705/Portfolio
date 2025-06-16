@@ -1,0 +1,8 @@
+/* Add to App.css for loader font customization */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap');
+
+.loader-robotic-font {
+  font-family: 'Orbitron', 'Roboto Mono', monospace;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
