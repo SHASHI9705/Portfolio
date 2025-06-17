@@ -78,35 +78,35 @@ const Skills: React.FC = () => {
       <div className="flex flex-wrap gap-8 justify-center items-start mt-8 w-full">
         {/* Python Skill Box */}
         <div className="flex flex-col items-center bg-white/10 rounded-xl shadow-lg p-6 w-32 h-36 transition-transform duration-300 hover:scale-105 hover:bg-yellow-400/30 group cursor-pointer">
-          <span className="flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-br from-yellow-400 via-yellow-200 to-white mb-3 transition-transform duration-300 group-hover:scale-110">
+          <span className="flex items-center justify-center w-12 h-12 rounded-lg mb-3 transition-transform duration-300 group-hover:scale-110">
             <PythonIcon />
           </span>
           <span className="text-lg font-semibold text-white mt-2 transition-colors duration-300 group-hover:text-yellow-200">Python</span>
         </div>
         {/* Networking Skill Box */}
         <div className="flex flex-col items-center bg-white/10 rounded-xl shadow-lg p-6 w-32 h-36 transition-transform duration-300 hover:scale-105 hover:bg-blue-200/30 group cursor-pointer">
-          <span className="flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-br from-blue-500 via-blue-300 to-white mb-3 transition-transform duration-300 group-hover:scale-110">
+          <span className="flex items-center justify-center w-12 h-12 rounded-lg mb-3 transition-transform duration-300 group-hover:scale-110">
             <NetworkingIcon />
           </span>
           <span className="text-lg font-semibold text-white mt-2 transition-colors duration-300 group-hover:text-blue-200">Networking</span>
         </div>
         {/* Security Skill Box */}
         <div className="flex flex-col items-center bg-white/10 rounded-xl shadow-lg p-6 w-32 h-36 transition-transform duration-300 hover:scale-105 hover:bg-blue-500/20 group cursor-pointer">
-          <span className="flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-br from-green-500 via-green-300 to-white mb-3 transition-transform duration-300 group-hover:scale-110">
+          <span className="flex items-center justify-center w-12 h-12 rounded-lg mb-3 transition-transform duration-300 group-hover:scale-110">
             <SecurityIcon />
           </span>
           <span className="text-lg font-semibold text-white mt-2 transition-colors duration-300 group-hover:text-green-200">Security</span>
         </div>
         {/* Linux Skill Box */}
         <div className="flex flex-col items-center bg-white/10 rounded-xl shadow-lg p-6 w-32 h-36 transition-transform duration-300 hover:scale-105 hover:bg-gray-400/30 group cursor-pointer">
-          <span className="flex items-center justify-center w-12 h-12 rounded-lg bg-gradient-to-br from-gray-700 via-gray-400 to-white mb-3 transition-transform duration-300 group-hover:scale-110">
+          <span className="flex items-center justify-center w-12 h-12 rounded-lg mb-3 transition-transform duration-300 group-hover:scale-110">
             <LinuxIcon />
           </span>
           <span className="text-lg font-semibold text-white mt-2 transition-colors duration-300 group-hover:text-gray-300">Linux</span>
         </div>
         {/* Cloud Skill Box */}
         <div className="flex flex-col items-center bg-white/10 rounded-xl shadow-lg p-6 w-32 h-36 transition-transform duration-300 hover:scale-105 hover:bg-blue-500/20 group cursor-pointer">
-          <span className="flex items-center justify-center w-12 h-12 rounded-lg bg-white mb-3 transition-transform duration-300 group-hover:scale-110">
+          <span className="flex items-center justify-center w-12 h-12 rounded-lg mb-3 transition-transform duration-300 group-hover:scale-110">
             <CloudIcon />
           </span>
           <span className="text-lg font-semibold text-white mt-2 transition-colors duration-300 group-hover:text-blue-300">Cloud</span>
