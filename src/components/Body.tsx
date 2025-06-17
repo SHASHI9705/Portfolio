@@ -22,12 +22,12 @@ const Body: React.FC = () => {
         <br /> Architecting cloud-first systems that don’t just work — they win.
       </p>
       <a
-        href="/src/assets/resume.pdf"
-        download
+        href="/images/resume.pdf"
+        download="resume.pdf"
         className="mt-6 flex items-center gap-2 px-4 xs:px-6 sm:px-8 py-2 xs:py-2.5 sm:py-3 bg-white text-gray-900 rounded-lg shadow-lg font-semibold text-base xs:text-lg transition-all duration-200 hover:bg-gray-100 hover:scale-105 active:scale-100 focus:outline-none focus:ring-2 focus:ring-blue-300 border border-gray-300"
       >
-        <span className="text-xl xs:text-2xl sm:text-2xl md:text-3xl border border-black rounded px-0.5 py-0.5 bg-black" role="img" aria-label="document">📄</span>
-        DOWNLOAD RESUME
+        <span className="text-xl xs:text-2xl sm:text-2xl md:text-3xl border border-black rounded bg-black px-1.5 py-0.5" role="img" aria-label="document">📄</span>
+        Download Resume
       </a>
       <div className="mt-10 sm:mt-14 flex flex-wrap gap-4 sm:gap-6 justify-center">
         <a
