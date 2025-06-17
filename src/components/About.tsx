@@ -36,7 +36,7 @@ const About: React.FC = () => {
             <br /> My projects combine innovation with impact—ranging from AI-powered healthcare solutions to scalable cloud platforms.
           </p>
         </div>
-        <div className="w-full md:w-[55%] bg-white/5 rounded-xl p-8 shadow-lg flex flex-col items-start border border-white">
+        <div className="w-full md:w-[55%] bg-white/10 rounded p-8 shadow-lg flex flex-col items-start border border-dashed">
           <h3 className="text-2xl font-semibold mb-2 text-left w-full bg-gradient-to-r from-blue-400 via-green-400 to-blue-400 bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient-x">What I do</h3>
           <div className="relative flex justify-start w-full">
             <div className="h-1 w-[120px] bg-white rounded-full mb-6"

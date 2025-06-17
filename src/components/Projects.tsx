@@ -75,7 +75,7 @@ const Projects: React.FC = () => {
             <svg width="28" height="28" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"/></svg>
           </button>
           {/* Center Div */}
-          <div className={`w-[500px] h-[70vh] bg-white/10 rounded-2xl shadow-xl flex flex-col items-center justify-center border-2 border-white text-3xl font-bold px-6 py-8 overflow-hidden transition-opacity duration-300 ${fadeState === 'fading-out' ? 'opacity-0' : fadeState === 'fading-in' ? 'opacity-100' : 'opacity-100'}`}>
+          <div className={`w-[500px] h-[70vh] bg-white/10 rounded shadow-xl flex flex-col items-center justify-center border border-white text-3xl font-bold px-6 py-8 overflow-hidden transition-opacity duration-300 ${fadeState === 'fading-out' ? 'opacity-0' : fadeState === 'fading-in' ? 'opacity-100' : 'opacity-100'}`}>
             {projectCards[centerIdx]}
           </div>
           {/* Right Button */}
