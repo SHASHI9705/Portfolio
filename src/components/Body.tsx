@@ -22,7 +22,7 @@ const Body: React.FC = () => {
         <br /> Architecting cloud-first systems that don’t just work — they win.
       </p>
       <a
-        href="/images/resume.pdf"
+        href="/assets/resume.pdf"
         download="resume.pdf"
         className="mt-6 flex items-center gap-2 px-4 xs:px-6 sm:px-8 py-2 xs:py-2.5 sm:py-3 bg-white text-gray-900 rounded-lg shadow-lg font-semibold text-base xs:text-lg transition-all duration-200 hover:bg-gray-100 hover:scale-105 active:scale-100 focus:outline-none focus:ring-2 focus:ring-blue-300 border border-gray-300"
       >
