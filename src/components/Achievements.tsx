@@ -38,7 +38,7 @@ const Achievements: React.FC = () => {
             }}
           />
         </div>
-        <div className="grid grid-cols-1 gap-8 px-4 md:px-24">
+        <div className="grid grid-cols-1  gap-8 px-4 md:px-24">
           {achievements.map((achievement, index) => (
             <div
               key={index}
