@@ -40,6 +40,16 @@ const Navbar: React.FC = () => (
         Projects
       </a>
       <a
+        href="#achievements"
+        className="hover:bg-white/20 hover:text-blue-300 transition-all duration-300 px-3 py-1 rounded-full"
+        onClick={e => {
+          e.preventDefault();
+          document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' });
+        }}
+      >
+        Certifications
+      </a>
+      <a
         href="#reachme"
         className="hover:bg-white/20 hover:text-blue-300 transition-all duration-300 px-3 py-1 rounded-full"
         onClick={e => {

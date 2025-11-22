@@ -1,55 +1,26 @@
-import React, { useState } from "react";
-import Project1Card from "../projects/project1";
-import Project2Card from "../projects/project2";
-import Project3Card from "../projects/project3";
-import Project4Card from "../projects/project4";
-import Project5Card from "../projects/project5";
-import Project6Card from "../projects/project6";
-import Project7Card from "../projects/project7";
-import Project8Card from "../projects/project8";
-
-const projectCards = [
-  <Project1Card key="project1" />,
-  <Project2Card key="project2" />,
-  <Project3Card key="project3" />,
-  <Project4Card key="project4" />,
-  <Project5Card key="project5" />,
-  <Project6Card key="project6" />,
-  <Project7Card key="project7" />,
-  <Project8Card key="project8" />
-];
+import React from "react";
+import { projects } from "../data/projectsData";
+import { GitHubIcon, LinkedInIcon } from "./Icons";
 
 const Projects: React.FC = () => {
-  const [centerIdx, setCenterIdx] = useState(0); 
-  const [fadeState, setFadeState] = useState<'idle' | 'fading-out' | 'fading-in'>('idle');
-
-  const handleLeft = () => {
-    if (fadeState !== 'idle') return;
-    setFadeState('fading-out');
-    setTimeout(() => {
-      setCenterIdx((prev) => (prev - 1 + projectCards.length) % projectCards.length);
-      setFadeState('fading-in');
-      setTimeout(() => setFadeState('idle'), 300);
-    }, 300);
-  };
-  const handleRight = () => {
-    if (fadeState !== 'idle') return;
-    setFadeState('fading-out');
-    setTimeout(() => {
-      setCenterIdx((prev) => (prev + 1) % projectCards.length);
-      setFadeState('fading-in');
-      setTimeout(() => setFadeState('idle'), 300);
-    }, 300);
-  };
+  const displayedProjects = [
+    projects.find((project) => project.id === 1),
+    projects.find((project) => project.id === 2),
+    projects.find((project) => project.id === 3),
+    projects.find((project) => project.id === 4),
+  ].filter(Boolean);
 
   return (
-    <section className="w-full min-h-[100vh] flex flex-col bg-transparent text-white pt-16 relative overflow-hidden" id="projects">
+    <section
+      className="w-full min-h-[100vh] flex flex-col bg-transparent text-white pt-16 relative overflow-hidden"
+      id="projects"
+    >
       <div className="flex flex-col items-center w-full">
         <h2 className="text-4xl md:text-5xl font-bold mb-2 tracking-wide text-center bg-gradient-to-r from-blue-400 via-green-400 to-blue-400 bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient-x">
-          ProJects
+          Full Stack Projects
         </h2>
         <div className="relative flex justify-center">
-          <div className="h-1 w-[180px] md:w-[240px] bg-white rounded-full mb-8"
+          <div className="h-1 w-[280px] md:w-[340px] bg-white rounded-full mb-8"
                style={{
                  filter: 'blur(0.5px)',
                  maskImage: 'linear-gradient(to right, black 80%, transparent 100%)',
@@ -59,39 +30,219 @@ const Projects: React.FC = () => {
           />
         </div>
       </div>
-      <div className="relative w-full flex-1 flex items-center justify-center mt-[-60px]">
-        <div className="flex items-center justify-center gap-8">
-          {/* Left Div */}
-          <div className="w-[500px] h-[70vh] bg-white/10 rounded-2xl shadow-xl flex flex-col items-center justify-center border-2 border-transparent select-none opacity-60 blur-sm pointer-events-none px-6 py-8 overflow-hidden">
-            {projectCards[(centerIdx - 1 + projectCards.length) % projectCards.length]}
-            <div className="absolute left-0 top-0 h-full w-1/2 bg-gradient-to-l from-transparent to-black blur-md pointer-events-none" />
-          </div>
-          {/* Left Button */}
-          <button
-            className="w-12 h-12 rounded-full bg-white/20 hover:bg-blue-400/70 text-white flex items-center justify-center shadow-lg transition-all duration-200 focus:outline-none mx-6"
-            aria-label="Scroll Left"
-            onClick={handleLeft}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-16 mb-8">
+        {displayedProjects.slice(0, 4).map((project) => (
+          <div
+            key={project?.id}
+            className="flex flex-col md:flex-row items-center md:items-start bg-white/10 rounded-xl shadow-lg p-4 gap-4"
           >
-            <svg width="28" height="28" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"/></svg>
-          </button>
-          {/* Center Div */}
-          <div className={`w-[500px] h-[70vh] bg-white/10 rounded shadow-xl flex flex-col items-center justify-center border border-white text-3xl font-bold px-6 py-8 overflow-hidden transition-opacity duration-300 ${fadeState === 'fading-out' ? 'opacity-0' : fadeState === 'fading-in' ? 'opacity-100' : 'opacity-100'}`}>
-            {projectCards[centerIdx]}
+            <div className="w-full md:w-1/2 flex justify-center md:justify-start relative group">
+              <img
+                src={project?.image}
+                alt={project?.title}
+                className="w-full h-[230px] object-fit rounded-lg group-hover:blur-sm group-hover:scale-105 group-hover:rotate-x-6 transition-transform duration-300"
+                style={{ transformOrigin: 'center' }}
+              />
+              <a
+                href={project?.visitLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 bg-black/50 text-white font-bold text-lg rounded border border-white"
+              >
+                Visit
+              </a>
+            </div>
+            <div className="w-full md:w-1/2 flex flex-col justify-center md:justify-start text-left">
+              <div className="flex justify-between items-center">
+                <h4 className="text-xl  font-bold mb-2">{project?.title}</h4>
+                <div className="flex gap-2">
+                  <a
+                    href={project?.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:underline"
+                  >
+                    <GitHubIcon />
+                  </a>
+                  <a
+                    href={project?.linkedinLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:underline"
+                  >
+                    <LinkedInIcon />
+                  </a>
+                </div>
+              </div>
+              <p className="text-sm text-gray-300 mb-4 italic font-bold">{project?.description}</p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {project?.technologies.map((tech, index) => (
+                  <span
+                    key={index}
+                    className="inline-block px-3 py-1 bg-blue-500 text-white text-xs font-semibold rounded-full"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
-          {/* Right Button */}
-          <button
-            className="w-12 h-12 rounded-full bg-white/20 hover:bg-blue-400/70 text-white flex items-center justify-center shadow-lg transition-all duration-200 focus:outline-none mx-6"
-            aria-label="Scroll Right"
-            onClick={handleRight}
-          >
-            <svg width="28" height="28" fill="none" stroke="currentColor" strokeWidth="3" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
-          </button>
-          {/* Right Div */}
-          <div className="w-[500px] h-[70vh] bg-white/10 rounded-2xl shadow-xl flex flex-col items-center justify-center border-2 border-transparent select-none opacity-60 blur-sm pointer-events-none px-6 py-8 overflow-hidden">
-            {projectCards[(centerIdx + 1) % projectCards.length]}
-            <div className="absolute right-0 top-0 h-full w-1/2 bg-gradient-to-r from-transparent to-black blur-md pointer-events-none" />
-          </div>
+        ))}
+      </div>
+
+      {/* Cloud and Architects Heading */}
+      <div className="flex flex-col items-center w-full mt-16 relative">
+        <h2 className="text-4xl md:text-5xl font-bold mb-2 tracking-wide text-center bg-gradient-to-r from-blue-400 via-green-400 to-blue-400 bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient-x">
+          Cloud and Architects
+        </h2>
+        <div className="relative flex justify-center">
+          <div
+            className="h-1 w-[280px] md:w-[340px] bg-white rounded-full mb-8"
+            style={{
+              filter: 'blur(0.5px)',
+              maskImage: 'linear-gradient(to right, black 80%, transparent 100%)',
+              WebkitMaskImage: 'linear-gradient(to right, black 80%, transparent 100%)',
+              opacity: 0.7,
+            }}
+          />
         </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-16">
+        {projects.slice(4, 8).map((project) => (
+          <div
+            key={project?.id}
+            className="flex flex-col md:flex-row items-center md:items-start bg-white/10 rounded-xl shadow-lg p-4 gap-4"
+          >
+            <div className="w-full md:w-1/2 flex justify-center md:justify-start relative group">
+              <img
+                src={project?.image}
+                alt={project?.title}
+                className="w-full h-[230px] object-fit rounded-lg group-hover:blur-sm group-hover:scale-105 group-hover:rotate-x-6 transition-transform duration-300"
+                style={{ transformOrigin: 'center' }}
+              />
+              <a
+                href={project?.visitLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 bg-black/50 text-white font-bold text-lg rounded-lg border-2 border-white px-4 py-2"
+              >
+                Visit
+              </a>
+            </div>
+            <div className="w-full md:w-1/2 flex flex-col justify-center md:justify-start text-left">
+              <div className="flex justify-between items-center">
+                <h4 className="text-xl font-bold mb-2">{project?.title}</h4>
+                <div className="flex gap-2">
+                  <a
+                    href={project?.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:underline"
+                  >
+                    <GitHubIcon />
+                  </a>
+                  <a
+                    href={project?.linkedinLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:underline"
+                  >
+                    <LinkedInIcon />
+                  </a>
+                </div>
+              </div>
+              <p className="text-sm italic text-gray-300 mb-4 font-bold">{project?.description}</p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {project?.technologies.map((tech, index) => (
+                  <span
+                    key={index}
+                    className="inline-block px-3 py-1 bg-blue-500 text-white text-xs font-semibold rounded-full"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      {/* More works */}
+      <div className="flex flex-col items-center w-full mt-16 relative">
+        <h2 className="text-4xl md:text-5xl font-bold mb-2 tracking-wide text-center bg-gradient-to-r from-blue-400 via-green-400 to-blue-400 bg-[length:200%_200%] bg-clip-text text-transparent animate-gradient-x">
+          Other works
+        </h2>
+        <div className="relative flex justify-center">
+          <div
+            className="h-1 w-[280px] md:w-[340px] bg-white rounded-full mb-8"
+            style={{
+              filter: 'blur(0.5px)',
+              maskImage: 'linear-gradient(to right, black 80%, transparent 100%)',
+              WebkitMaskImage: 'linear-gradient(to right, black 80%, transparent 100%)',
+              opacity: 0.7,
+            }}
+          />
+        </div>
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-4 md:px-16">
+        {projects.slice(8, 12).map((project) => (
+          <div
+            key={project?.id}
+            className="flex flex-col md:flex-row items-center md:items-start bg-white/10 rounded-xl shadow-lg p-4 gap-4"
+          >
+            <div className="w-full md:w-1/2 flex justify-center md:justify-start relative group">
+              <img
+                src={project?.image}
+                alt={project?.title}
+                className="w-full h-[230px] object-fit rounded-lg group-hover:blur-sm group-hover:scale-105 group-hover:rotate-x-6 transition-transform duration-300"
+                style={{ transformOrigin: 'center' }}
+              />
+              <a
+                href={project?.visitLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300 bg-black/50 text-white font-bold text-lg rounded-lg border-2 border-white px-4 py-2"
+              >
+                Visit
+              </a>
+            </div>
+            <div className="w-full md:w-1/2 flex flex-col justify-center md:justify-start text-left">
+              <div className="flex justify-between items-center">
+                <h4 className="text-xl font-bold mb-2">{project?.title}</h4>
+                <div className="flex gap-2">
+                  <a
+                    href={project?.githubLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:underline"
+                  >
+                    <GitHubIcon />
+                  </a>
+                  <a
+                    href={project?.linkedinLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:underline"
+                  >
+                    <LinkedInIcon />
+                  </a>
+                </div>
+              </div>
+              <p className="text-sm text-gray-300 italic mb-4 font-bold">{project?.description}</p>
+              <div className="flex flex-wrap gap-2 mb-4">
+                {project?.technologies.map((tech, index) => (
+                  <span
+                    key={index}
+                    className="inline-block px-3 py-1 bg-blue-500 text-white text-xs font-semibold rounded-full"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

@@ -9,6 +9,7 @@ import ReachMe from './components/ReachMe';
 import SectionConnector from './components/SectionConnector';
 import Loader from './components/Loader';
 import Projects from './components/Projects';
+import Achievements from './components/Achievements';
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -35,6 +36,8 @@ function App() {
       <Skills />
       <SectionConnector />
       <Projects />
+      <SectionConnector />
+      <Achievements />
       <SectionConnector />
       <ReachMe />
     </div>

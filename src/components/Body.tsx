@@ -22,8 +22,8 @@ const Body: React.FC = () => {
         <br /> Architecting cloud-first systems that don’t just work — they win.
       </p>
       <a
-        href="/images/resume.pdf"
-        download="resume.pdf"
+        href="/images/Shashi_resume.pdf"
+        download="Shashi_resume.pdf"
         className="mt-6 flex items-center gap-2 px-4 xs:px-6 sm:px-8 py-2 xs:py-2.5 sm:py-3 bg-white/20 text-black rounded shadow-lg font-semibold text-base xs:text-lg transition-all duration-200 hover:bg-white/40 hover:scale-105 active:scale-100 focus:outline-none focus:ring-2 focus:ring-blue-300 "
       >
         <span className="text-xl xs:text-2xl border border-white sm:text-2xl md:text-3xl rounded bg-black px-1.5 py-0.5" role="img" aria-label="document">📄</span>
